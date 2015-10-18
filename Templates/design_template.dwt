@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<!-- TemplateBeginEditable name="doctitle" -->
+	<title>OurCompany.com</title>
+	<!-- TemplateEndEditable -->
+	<meta name="description" content="Designed and developed by Codify Design Studio - codifydesign.com" />
+	<link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+	<script src="../SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+	<link href="../SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+	<!-- TemplateBeginEditable name="head" -->
+	<!-- TemplateEndEditable -->
+</head>
+<body>
+	<div class="topBanner"></div>
+	<div class="container">
+		<div class="bannerArea">
+			<div class="bannerNav">
+				<a href="#">Suspisse Id</a>&bull;<a href="#">Vbulum Aeenas</a>&bull;<a href="#">Nec Oretium</a>&bull;<a href="#">Praesent Viigula</a>&bull;<a href="#">Vestm aenas</a>
+			</div>
+			<div class="toplogo">
+				<a href="#"><img src="../images/banner_logo.gif" border="0" /></a>
+			</div>
+		</div>
+		<div class="contentArea">
+			<div class="contentleft"><!-- TemplateBeginEditable name="content" -->
+				<h1>LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT</h1>
+				<img class="imageright" src="../images/page_image_1.jpg" border="0" />
+				<p>Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamuspharetra posuere sapien.</p>
+				<p>Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Donec porttitor ligula eu dolor. Maecenas vitae nulla consequat libero cursus venenatis. Nam magna enim, accumsan eu, blandit sed, blandit a, eros. Lorem ipsum dolor sit amet, <a href="#">consectetuer adipiscing elit</a>. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum.</p>
+			<!-- TemplateEndEditable -->
+				<div id="TabbedPanels1" class="TabbedPanels">
+					<ul class="TabbedPanelsTabGroup">
+						<li class="TabbedPanelsTab firstTab" tabindex="0">LOREM</li>
+						<li class="TabbedPanelsTab middleTab" tabindex="0">DOLORE</li>
+						<li class="TabbedPanelsTab lastTab" tabindex="0">NULLAMN</li>
+					</ul>
+					<div class="TabbedPanelsContentGroup">
+						<div class="TabbedPanelsContent">
+							<div class="content">
+								<img class="imageleft" src="../images/page_image_1.jpg" border="0" />
+								<p>Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Donec porttitor ligula eu dolor. <a href="#">Maecenas vitae</a> nulla consequat libero cursus venenatis. Nam magna enim, accumsan eu, blandit sed, blandit a, eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum lorem non turpis.</p>
+								<p>Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Donec porttitor ligula eu dolor. Maecenas vitae nulla consequat libero cursus venenatis. Nam magna enim, accumsan eu, blandit sed, blandit a, eros. Lorem ipsum dolor sit amet.</p>
+							</div>
+						</div>
+						<div class="TabbedPanelsContent">
+							<div class="content">
+								<p>Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Donec porttitor ligula eu dolor. Maecenas vitae nulla consequat libero cursus venenatis. Nam magna enim, accumsan eu, blandit sed, blandit a, eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum.</p>
+							</div>
+						</div>
+						<div class="TabbedPanelsContent">
+							<div class="content">
+								<p>Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Donec porttitor ligula eu dolor. Maecenas vitae nulla consequat libero cursus venenatis. Nam magna enim, accumsan eu, blandit sed, blandit a, eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum lorem non turpis.</p>
+							</div>
+						</div>
+					</div>
+					<div class="tabbedpanels_bottom"></div>
+				</div>
+			</div>
+			<!-- TemplateBeginEditable name="sidebar" -->
+			<div class="contentright">
+				<h2>Cras tempor morbi egestas</h2>
+				<p>Non consequattempus, nunc arcu mollis enim,eu aliqu mam erat nullam non consectetuer malesum adamvelit. Nam ante nulla, interdum vel, tristique ac condimentum non, tellus. Proinnornare feugiat nisl. Susp endisse dolor nisl, ultrices at, eleifend vel, consequat at, dolor. <a href="#">Viva mus auctor</a> leo vel dui. Aliquam erat volutpat. Phasellus nibh.</p>
+				<h2>Cras tempor morbi egestas</h2>
+				<p>Non consequattempus, nunc arcu mollis enim,eu aliqu mam erat nullam non conse ctetuer malesum adamvelit. Nam ante nulla, interdum vel, tristique ac condimentum non, tellus. Proinnornare feugiat nisl.</p>
+				<h2>Cras tempor morbi egestas</h2>
+				<img class="imageright" src="../images/page_image_2.jpg" border="0" />
+				<p>Non consequattempus, nunc arcu mollis enim,eu aliqu mam erat nullam non con sectetuer malesum adamvelit. Nam ante nulla, interdum vel, tristique ac <a href="#">condimentum non</a>, tellus. Proinnornare feugiat nisl. Suspendisse dolor nisl, ultrices at, eleifend vel, consequat at, dolor. Viva mus auctor leo vel dui. Aliquam erat volutpat. Phasellus nibh. Nam ante nulla, interdu.</p>
+			</div>
+			<!-- TemplateEndEditable -->
+			<div style="clear:both;"></div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="footerArea">
+			<div class="footernav">
+				<a href="#">Privacy Policy</a> | <a href="#">Contact Us</a> | <a href="#">Site Map</a>
+			</div>
+			<div class="copyright">
+				&copy; 2009 Our Company. All rights reserved.
+			</div>
+		</div>
+	</div><script type="text/javascript">
+				 <!--
+				 var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+				 //-->
+</script>
+</body>
+</html>

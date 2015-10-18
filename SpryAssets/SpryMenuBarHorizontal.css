@@ -1,0 +1,587 @@
+w@charset "UTF-8";
+
+/* SpryMenuBarHorizontal.css - version 0.6 - Spry Pre-Release 1.6.1 */
+
+/* Copyright (c) 2006. Adobe Systems Incorporated. All rights reserved. */
+
+/*******************************************************************************
+
+ LAYOUT INFORMATION: describes box model, positioning, z-order
+
+ *******************************************************************************/
+
+/* The outermost container of the Menu Bar, an auto width box with no margin or padding */
+ul.MenuBarHorizontal
+{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	font-size: 100%;
+	cursor: default;
+	width: auto;
+}
+/* Set the active Menu Bar with this class, currently setting z-index to accomodate IE rendering bug: http://therealcrisp.xs4all.nl/meuk/IE-zindexbug.html */
+ul.MenuBarActive
+{
+	z-index: 1000;
+}
+/* Menu item containers, position children relative to this container and are a fixed width */
+ul.MenuBarHorizontal li
+{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	font-size: 100%;
+	position: relative;
+	text-align: left;
+	cursor: pointer;
+	width: 14em;
+	float: left;
+	border-color: white;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-style: none;
+	border-right-width: 1px;
+}
+/* Submenus should appear below their parent (top: 0) with a higher z-index, but they are initially off the left side of the screen (-1000em) */
+ul.MenuBarHorizontal ul
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 100%;
+	z-index: 1020;
+	cursor: default;
+	width: 14em;
+	position: absolute;
+	left: -1000em;
+}
+/* Submenu that is showing with class designation MenuBarSubmenuVisible, we set left to auto so it comes onto the screen below its parent menu item */
+ul.MenuBarHorizontal ul.MenuBarSubmenuVisible
+{
+	left: auto;
+}
+/* Menu item containers are same fixed width as parent */
+ul.MenuBarHorizontal ul li
+{
+	width: 14em;
+}
+/* Submenus should appear slightly overlapping to the right (95%) and up (-5%) */
+ul.MenuBarHorizontal ul ul
+{
+	position: absolute;
+	margin: 0 0 0 99%;
+}
+/* Submenu that is showing with class designation MenuBarSubmenuVisible, we set left to 0 so it comes onto the screen */
+ul.MenuBarHorizontal ul.MenuBarSubmenuVisible ul.MenuBarSubmenuVisible
+{
+	left: auto;
+	top: 0;
+}
+
+/*******************************************************************************
+
+ DESIGN INFORMATION: describes color scheme, borders, fonts
+
+ *******************************************************************************/
+
+/* Submenu containers have borders on all sides */
+ul.MenuBarHorizontal ul
+{
+
+}
+/* Menu items are a light gray block with padding and no text decoration */
+ul.MenuBarHorizontal a
+{
+	display: block;
+	cursor: pointer;
+	padding: 0.9em 0.75em;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	text-decoration: none;
+	color: white;
+}
+
+
+/* Menu items that have mouse over or focus have a blue background and white text */
+ul.MenuBarHorizontal a:hover, ul.MenuBarHorizontal a:focus
+{
+	color: #FFF;
+}
+/* Menu items that are open with submenus are set to MenuBarItemHover with a blue background and white text */
+ul.MenuBarHorizontal a.MenuBarItemHover, ul.MenuBarHorizontal a.MenuBarItemSubmenuHover, ul.MenuBarHorizontal a.MenuBarSubmenuVisible
+{
+	color: #FFF;
+}
+
+/*******************************************************************************
+
+ SUBMENU INDICATION: styles if there is a submenu under a given menu item
+
+ *******************************************************************************/
+
+/* Menu items that have a submenu have the class designation MenuBarItemSubmenu and are set to use a background image positioned on the far left (95%) and centered vertically (50%) */
+ul.MenuBarHorizontal a.MenuBarItemSubmenu
+{
+	background-image: url(SpryMenuBarDown.gif);
+	background-repeat: no-repeat;
+	background-position: 10px 85%;
+}
+/* Menu items that have a submenu have the class designation MenuBarItemSubmenu and are set to use a background image positioned on the far left (95%) and centered vertically (50%) */
+ul.MenuBarHorizontal ul a.MenuBarItemSubmenu
+{
+	background-image: url(SpryMenuBarRight.gif);
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+}
+/* Menu items that are open with submenus have the class designation MenuBarItemSubmenuHover and are set to use a "hover" background image positioned on the far left (95%) and centered vertically (50%) */
+ul.MenuBarHorizontal a.MenuBarItemSubmenuHover
+{
+	b/ackground-image: url(SpryMenuBarDownHover.gif);
+	background-repeat: no-repeat;
+	background-position: 10px 85%;
+}
+/* Menu items that are open with submenus have the class designation MenuBarItemSubmenuHover and are set to use a "hover" background image positioned on the far left (95%) and centered vertically (50%) */
+ul.MenuBarHorizontal ul a.MenuBarItemSubmenuHover
+{
+	b/ackground-image: url(SpryMenuBarRightHover.gif);
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+}
+
+/*******************************************************************************
+
+ BROWSER HACKS: the hacks below should not be changed unless you are an expert
+
+ *******************************************************************************/
+
+/* HACK FOR IE: to make sure the sub menus show above form controls, we underlay each submenu with an iframe */
+ul.MenuBarHorizontal iframe
+{
+	position: absolute;
+	z-index: 1010;
+	filter:alpha(opacity:0.1);
+}
+/* HACK FOR IE: to stabilize appearance of menu items; the slash in float is to keep IE 5.0 from parsing */
+@media screen, projection
+{
+	ul.MenuBarHorizontal li.MenuBarItemIE
+	{
+		display: inline;
+		f/loat: left;
+		ba/ckground: #FFF;
+	}
+}
+
+
+
+/* Custom Classes added by Codify Design Studio  */
+
+ul.MenuBarHorizontal a:visited { color: white;}
+ul ul a { background-color: #436d9c; }
+ul a.MenuBarItemHover { background-color: #19385a; }
+ul .MenuBarItemSubmenu ul li a { border: none; }
+ul a.MenuBarItemSubmenu.MenuBarItemSubmenuHover { background-color: #19385a; }
+ul.MenuBarSubmenuVisible li { border: none; }
+
+/* SpryTabbedPanels.css - version 0.4 - Spry Pre-Release 1.6.1 */
+
+/* Copyright (c) 2006. Adobe Systems Incorporated. All rights reserved. */
+
+/* Horizontal Tabbed Panels
+ *
+ * The default style for a TabbedPanels widget places all tab buttons
+ * (left aligned) above the content panel.
+ */
+
+/* This is the selector for the main TabbedPanels container. For our
+ * default style, this container does not contribute anything visually,
+ * but it is floated left to make sure that any floating or clearing done
+ * with any of its child elements are contained completely within the
+ * TabbedPanels container, to minimize any impact or undesireable
+ * interaction with other floated elements on the page that may be used
+ * for layout.
+ *
+ * If you want to constrain the width of the TabbedPanels widget, set a
+ * width on the TabbedPanels container. By default, the TabbedPanels widget
+ * expands horizontally to fill up available space.
+ *
+ * The name of the class ("TabbedPanels") used in this selector is not
+ * necessary to make the widget function. You can use any class name you
+ * want to style the TabbedPanels container.
+ */
+.TabbedPanels {
+	width: 520px;
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+/* This is the selector for the TabGroup. The TabGroup container houses
+ * all of the tab buttons for each tabbed panel in the widget. This container
+ * does not contribute anything visually to the look of the widget for our
+ * default style.
+ *
+ * The name of the class ("TabbedPanelsTabGroup") used in this selector is not
+ * necessary to make the widget function. You can use any class name you
+ * want to style the TabGroup container.
+ */
+.TabbedPanelsTabGroup {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* This is the selector for the TabbedPanelsTab. This container houses
+ * the title for the panel. This is also the tab "button" that the user clicks
+ * on to activate the corresponding content panel so that it appears on top
+ * of the other tabbed panels contained in the widget.
+ *
+ * For our default style, each tab is positioned relatively 1 pixel down from
+ * where it wold normally render. This allows each tab to overlap the content
+ * panel that renders below it. Each tab is rendered with a 1 pixel bottom
+ * border that has a color that matches the top border of the current content
+ * panel. This gives the appearance that the tab is being drawn behind the
+ * content panel.
+ *
+ * The name of the class ("TabbedPanelsTab") used in this selector is not
+ * necessary to make the widget function. You can use any class name you want
+ * to style this tab container.
+ */
+.TabbedPanelsTab {
+	position: relative;
+	color: #000;
+	top: 0px;
+	float: left;
+	list-style: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+	font-weight: bold;
+	background-image: url(../images/tabbed_panel_tab_normal.gif);
+	background-repeat: no-repeat;
+	border-left: 1px solid white;
+	border-bottom-color: white;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* This selector is an example of how to change the appearnce of a tab button
+ * container as the mouse enters it. The class "TabbedPanelsTabHover" is
+ * programatically added and removed from the tab element as the mouse enters
+ * and exits the container.
+ */
+.TabbedPanelsTabHover {
+	background-image: url(../images/tabbed_panel_tab_hover.gif);
+	color: #FFF;
+}
+
+/* This selector is an example of how to change the appearance of a tab button
+ * container after the user has clicked on it to activate a content panel.
+ * The class "TabbedPanelsTabSelected" is programatically added and removed
+ * from the tab element as the user clicks on the tab button containers in
+ * the widget.
+ *
+ * As mentioned above, for our default style, tab buttons are positioned
+ * 1 pixel down from where it would normally render. When the tab button is
+ * selected, we change its bottom border to match the background color of the
+ * content panel so that it looks like the tab is part of the content panel.
+ */
+.TabbedPanelsTabSelected {
+	color: #FFF;
+	border-bottom-color: #666;
+	background-image: url(../images/tabbed_panel_tab_normal.gif);
+}
+
+/* This selector is an example of how to make a link inside of a tab button
+ * look like normal text. Users may want to use links inside of a tab button
+ * so that when it gets focus, the text *inside* the tab button gets a focus
+ * ring around it, instead of the focus ring around the entire tab.
+ */
+.TabbedPanelsTab a {
+	color: 000000;
+	text-decoration: none;
+	
+}
+
+/* This is the selector for the ContentGroup. The ContentGroup container houses
+ * all of the content panels for each tabbed panel in the widget. For our
+ * default style, this container provides the background color and borders that
+ * surround the content.
+ *
+ * The name of the class ("TabbedPanelsContentGroup") used in this selector is
+ * not necessary to make the widget function. You can use any class name you
+ * want to style the ContentGroup container.
+ */
+.TabbedPanelsContentGroup {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	clear: both;
+	
+}
+
+/* This is the selector for the Content panel. The Content panel holds the
+ * content for a single tabbed panel. For our default style, this container
+ * provides some padding, so that the content is not pushed up against the
+ * widget borders.
+ *
+ * The name of the class ("TabbedPanelsContent") used in this selector is
+ * not necessary to make the widget function. You can use any class name you
+ * want to style the Content container.
+ */
+.TabbedPanelsContent {
+	padding: 0px 0px 0px 0px;
+}
+
+/* This selector is an example of how to change the appearnce of the currently
+ * active container panel. The class "TabbedPanelsContentVisible" is
+ * programatically added and removed from the content element as the panel
+ * is activated/deactivated.
+ */
+.TabbedPanelsContentVisible {
+}
+
+/* Vertical Tabbed Panels
+ *
+ * The following rules override some of the default rules above so that the
+ * TabbedPanels widget renders with its tab buttons along the left side of
+ * the currently active content panel.
+ *
+ * With the rules defined below, the only change that will have to be made
+ * to switch a horizontal tabbed panels widget to a vertical tabbed panels
+ * widget, is to use the "VTabbedPanels" class on the top-level widget
+ * container element, instead of "TabbedPanels".
+ */
+
+/* This selector floats the TabGroup so that the tab buttons it contains
+ * render to the left of the active content panel. A border is drawn around
+ * the group container to make it look like a list container.
+ */
+.VTabbedPanels .TabbedPanelsTabGroup {
+	float: left;
+	margin: 20px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width: 150px;
+	position: relative;
+	left:6px;
+}
+
+/* This selector disables the float property that is placed on each tab button
+ * by the default TabbedPanelsTab selector rule above. It also draws a bottom
+ * border for the tab. The tab button will get its left and right border from
+ * the TabGroup, and its top border from the TabGroup or tab button above it.
+ */
+.VTabbedPanels .TabbedPanelsTab {
+	float: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* This selector disables the float property that is placed on each tab button
+ * by the default TabbedPanelsTab selector rule above. It also draws a bottom
+ * border for the tab. The tab button will get its left and right border from
+ * the TabGroup, and its top border from the TabGroup or tab button above it.
+ */
+.VTabbedPanels .TabbedPanelsTabSelected {
+
+}
+
+/* This selector floats the content panels for the widget so that they
+ * render to the right of the tabbed buttons.
+ */
+.VTabbedPanels .TabbedPanelsContentGroup {
+	margin: 27px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	clear: none;
+	float: left;
+	padding: 0px;
+	width: 350px;
+	background-image: url(../images/tabbed_panel_content.gif);
+	background-position: 0px -160px;
+	background-repeat: no-repeat;
+}
+
+
+
+/* Custom Classes added by Codify Design Studio  */
+
+
+/*  Horizontal settings   */
+.TabbedPanels .TabbedPanelsContentGroup { margin: 0px 0px 0px 0px; }
+.TabbedPanels .TabbedPanelsContent p { margin-top: 0px; }
+.TabbedPanels .TabbedPanelsContent a {
+	color: #FFF;
+}
+.TabbedPanels .TabbedPanelsContent a:hover {
+	color: #000;
+}
+
+.TabbedPanels .TabbedPanelsContent .content {
+	color: #FFF;
+	width: 460px;
+	padding: 15px 30px 0px 30px;
+	background-image: url(../images/tabbed_panel.gif);
+	background-repeat: no-repeat;
+	background-position: 0px -320px;
+	float:left;
+}
+
+.TabbedPanels .tabbedpanels_bottom {
+	height: 10px;
+	width: 520px;
+	background-image: url(../images/tabbed_panel_content.gif);
+	background-position: 0px bottom;
+	float: left;
+}
+
+.TabbedPanels .firstTab { background-position: left 0px; border-left-style: none; }
+.TabbedPanels .middleTab { background-position: -25px 0px;}
+.TabbedPanels .lastTab { padding-right: 30px; background-position: right 0px; }
+/* SpryAccordion.css - version 0.4 - Spry Pre-Release 1.6.1 */
+
+/* Copyright (c) 2006. Adobe Systems Incorporated. All rights reserved. */
+
+/* This is the selector for the main Accordion container. For our default style,
+ * we draw borders on the left, right, and bottom. The top border of the Accordion
+ * will be rendered by the first AccordionPanelTab which never moves.
+ *
+ * If you want to constrain the width of the Accordion widget, set a width on
+ * the Accordion container. By default, our accordion expands horizontally to fill
+ * up available space.
+ *
+ * The name of the class ("Accordion") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style the
+ * Accordion container.
+ */
+.Accordion {
+	overflow: hidden;
+	width: 575px;
+}
+
+/* This is the selector for the AccordionPanel container which houses the
+ * panel tab and a panel content area. It doesn't render visually, but we
+ * make sure that it has zero margin and padding.
+ *
+ * The name of the class ("AccordionPanel") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style an
+ * accordion panel container.
+*/
+.AccordionPanel {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* This is the selector for the AccordionPanelTab. This container houses
+ * the title for the panel. This is also the container that the user clicks
+ * on to open a specific panel.
+ *
+ * The name of the class ("AccordionPanelTab") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style an
+ * accordion panel tab container.
+ *
+ * NOTE:
+ * This rule uses -moz-user-select and -khtml-user-select properties to prevent the
+ * user from selecting the text in the AccordionPanelTab. These are proprietary browser
+ * properties that only work in Mozilla based browsers (like FireFox) and KHTML based
+ * browsers (like Safari), so they will not pass W3C validation. If you want your documents to
+ * validate, and don't care if the user can select the text within an AccordionPanelTab,
+ * you can safely remove those properties without affecting the functionality of the widget.
+ */
+.AccordionPanelTab {
+	font-family: "Trebuchet MS", Helvetica, Verdana, Arial, sans-serif;
+	font-size: 14px;
+	font-color: #000000;
+	/*color: #ffffff;*/
+	margin: 0px;
+	cursor: pointer;
+	padding: 10px 30px 10px 55px;
+	border-top: solid;
+	/*border-color: #75570b;*/
+	border-color: #ffffff;
+	border-width: 1px;
+	font-weight: bold;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-image: url(../images/accordian_908.gif);
+	background-color: #436d9c;
+	/*background-color: #c5b58d;*/
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+
+/* This is the selector for a Panel's Content area. It's important to note that
+ * you should never put any padding on the panel's content area if you plan to
+ * use the Accordions panel animations. Placing a non-zero padding on the content
+ * area can cause the accordion to abruptly grow in height while the panels animate.
+ *
+ * Anyone who styles an Accordion *MUST* specify a height on the Accordion Panel
+ * Content container.
+ *
+ * The name of the class ("AccordionPanelContent") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style an
+ * accordion panel content container.
+ */
+.AccordionPanelContent {
+	overflow: auto;
+	margin: 0px;
+	padding: 0px;
+	color: #ffffff;
+	background-color: #ffffff;
+	/*background-color: #c5b58d;*/
+	z/oom: 1;  /* Hack for IE to force auto height for the content panels  */
+}
+
+/* This is an example of how to change the appearance of the panel tab that is
+ * currently open. The class "AccordionPanelOpen" is programatically added and removed
+ * from panels as the user clicks on the tabs within the Accordion.
+ */
+
+.AccordionPanelOpen .AccordionPanelTab {
+	background-position: 0px -120px;
+	color: #75570b;
+}
+
+
+/* This is an example of how to change the appearance of the panel tab as the
+ * mouse hovers over it. The class "AccordionPanelTabHover" is programatically added
+ * and removed from panel tab containers as the mouse enters and exits the tab container.
+ */
+.AccordionPanelTabHover {
+	background-position: 0px -60px;
+	color: #FFFFFF;
+}
+.AccordionPanelOpen .AccordionPanelTabHover {
+	background-position: 0px -180px;	
+}
+
+/* This is an example of how to change the appearance of all the panel tabs when the
+ * Accordion has focus. The "AccordionFocused" class is programatically added and removed
+ * whenever the Accordion gains or loses keyboard focus.
+ */
+.AccordionFocused .AccordionPanelTab {
+	background-color: #c5b58d;
+}
+
+/* This is an example of how to change the appearance of the panel tab that is
+ * currently open when the Accordion has focus.
+ */
+.AccordionFocused .AccordionPanelOpen .AccordionPanelTab {
+	background-color: #c5b58d;
+}
+
+
+
+/* Custom Classes added by Codify Design Studio  */
+
+
+.AccordionPanelContent .acontent{
+	padding: 20px 30px 20px 55px;
+}
+
+
